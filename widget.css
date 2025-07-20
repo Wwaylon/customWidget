@@ -1,0 +1,65 @@
+html,body {
+    margin: 0;
+    font-family: monospace;
+    color: hsl(197, 62%, 32%);
+}
+
+#chat {
+    width: 400px;
+    height: 350px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#chat::-webkit-scrollbar {
+    display: none;
+}
+
+#chat ul {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+#chat li {
+    background-color: hsl(196, 58%, 93%);
+    box-sizing: border-box;
+    padding: 1rem 10px;
+    margin-bottom: 10px;
+    border: 4px solid;
+}
+
+#chat blockquote {
+    font-size: 1.2rem;
+}
+
+
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+#chat li:last-of-type {
+    animation-name: slide-in-left;
+    animation-duration: 0.15s;
+    animation-timing-function: ease-in;
+}
+
+
+
+
+#chat li:not(:last-of-type) {
+    opacity: 0.5;
+}
+
+
