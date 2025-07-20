@@ -34,7 +34,6 @@ html,body {
 }
 
 
-
 @keyframes slide-in-left {
     from {
         transform: translateX(400px);
@@ -47,16 +46,11 @@ html,body {
     }
 }
 
-
-
 #chat li:last-of-type {
     animation-name: slide-in-left;
     animation-duration: 0.15s;
     animation-timing-function: ease-in;
 }
-
-
-
 
 #chat li:not(:last-of-type) {
     opacity: 0.5;
