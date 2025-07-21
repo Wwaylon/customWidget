@@ -1,11 +1,11 @@
 :root {
-  --chat-width: 400px;
+  --chat-width: 600px;
   --chat-height: 500px;
-  --chat-margin-bottom: 20px;
+  --chat-margin-bottom: 35px;
 
-  --text-color: hsl(31, 52%, 37%);
-  --username-bg: hsl(31, 52%, 37%);
-  --message-bg: rgba(255, 255, 255, 0.15); /* <-- added background color */
+  --text-color: hsl(31, 36%, 45%);
+  --username-bg: white;
+  --message-bg: #f8ccd4; /* <-- added background color */
 }
 
 html, body {
@@ -43,9 +43,11 @@ html, body {
 #chat li {
   background: var(--message-bg); /* <-- background for message bubble */
   border: none;
+  outline: 2px solid #ffffff;    
+  outline-offset: -6px;       
   border-radius: 45px;
   box-sizing: border-box;
-  padding: 20px 16px;
+  padding: 25px 50px;
   margin-bottom: var(--chat-margin-bottom);
   will-change: transform, opacity;
   opacity: 1;
@@ -54,13 +56,15 @@ html, body {
 
 #chat li .username {
   position: absolute;
-  top: -12px;
+  top: -20px;
   left: 45px;
   background: var(--username-bg);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 1rem;
-  font-size: 0.9rem;
+  color: #fbb0bc;
+  outline: 2px solid #fbb0bc;    
+  outline-offset: -6px;          
+  padding: 8px 100px 8px 20px;
+  border-radius: 20px;
+  font-size: 1.4rem;
   font-weight: bold;
   white-space: nowrap;
   z-index: 1;
@@ -68,7 +72,7 @@ html, body {
 }
 
 #chat blockquote {
-  font-size: 1rem;
+  font-size: 1.6rem;
   margin: 0.5rem 0 0 0;
   color: var(--text-color);
   white-space: pre-wrap;
