@@ -1,19 +1,18 @@
 :root {
   --chat-width: 400px;
   --chat-height: 500px;
-  --chat-bg: transparent;
-  --chat-text: hsl(31, 52%, 37%);
-  --chat-msg-bg: transparent;
-  --chat-border: transparent;
   --chat-margin-bottom: 20px;
+
+  --text-color: hsl(31, 52%, 37%);
+  --username-bg: hsl(31, 52%, 37%);
+  --message-bg: rgba(255, 255, 255, 0.15); /* <-- added background color */
 }
 
 html, body {
   margin: 0;
   padding: 0;
   font-family: monospace;
-  background: var(--chat-bg);
-  color: var(--chat-text);
+  background: transparent;
 }
 
 #chat {
@@ -24,7 +23,8 @@ html, body {
   flex-direction: column-reverse;
   padding: 10px;
   box-sizing: border-box;
-  border: 2px solid var(--chat-border);
+  background: transparent;
+  border: none;
   margin: 20px auto;
 }
 
@@ -41,12 +41,12 @@ html, body {
 }
 
 #chat li {
-  background-color: var(--chat-msg-bg);
+  background: var(--message-bg); /* <-- background for message bubble */
+  border: none;
   border-radius: 45px;
   box-sizing: border-box;
   padding: 20px 16px;
   margin-bottom: var(--chat-margin-bottom);
-  border: 4px solid var(--chat-border);
   will-change: transform, opacity;
   opacity: 1;
   position: relative;
@@ -56,7 +56,8 @@ html, body {
   position: absolute;
   top: -12px;
   left: 45px;
-  background: var(--chat-text);
+  background: var(--username-bg);
+  color: white;
   padding: 4px 10px;
   border-radius: 1rem;
   font-size: 0.9rem;
@@ -69,7 +70,7 @@ html, body {
 #chat blockquote {
   font-size: 1rem;
   margin: 0.5rem 0 0 0;
-  color: #333;
+  color: var(--text-color);
   white-space: pre-wrap;
   word-break: break-word;
 }
