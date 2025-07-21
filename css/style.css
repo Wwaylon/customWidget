@@ -1,10 +1,10 @@
 :root {
   --chat-width: 400px;
   --chat-height: 500px;
-  --chat-bg: #f9f9f9;
-  --chat-text: hsl(197, 62%, 32%);
-  --chat-msg-bg: hsl(196, 58%, 93%);
-  --chat-border: hsl(197, 62%, 32%);
+  --chat-bg: transparent;
+  --chat-text: hsl(31, 52%, 37%);
+  --chat-msg-bg: transparent;
+  --chat-border: transparent;
   --chat-margin-bottom: 20px;
 }
 
