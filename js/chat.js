@@ -6,7 +6,7 @@ const CONFIG = {
   maxMessages: 50,
   pixelsPerSecond: 250,
   fadeDuration: 0.5,         // seconds
-  newMessageOffset: 20       // px: matches li margin-bottom
+  newMessageOffset: 40       // px: matches li margin-bottom
 };
 
 // Core function
