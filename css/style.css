@@ -53,7 +53,22 @@ html, body {
   margin-bottom: var(--chat-margin-bottom);
   will-change: transform, opacity;
   opacity: 1;
-  position: relative;
+  position: relative; /* Needed for absolute positioning inside */
+}
+
+#chat li.mod {
+  background: #d1e7ff;
+  border-left: 6px solid #3399ff;
+}
+
+#chat li.vip {
+  background: #ffe7fa;
+  border-left: 6px solid #e040fb;
+}
+
+#chat li.sub {
+  background: #fff7d1;
+  border-left: 6px solid #ffd700;
 }
 
 #chat li .username {
@@ -85,4 +100,38 @@ html, body {
   position: fixed !important;
   pointer-events: none;
   z-index: 9999;
+}
+
+#chat li img {
+  display: inline-block;
+  height: 32px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.bow-img {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  height: 32px !important;
+  width: auto !important;
+  z-index: 2;
+}
+
+.spark-l-img {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  height: 32px !important;
+  width: auto !important;
+  z-index: 2;
+}
+
+.spark-r-img {
+  position: absolute;
+  bottom: 10px;   
+  left: 10px;     
+  height: 32px !important;
+  width: auto !important;
+  z-index: 2;
 }
